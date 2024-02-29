@@ -1,11 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: "/tgs963.github.io",
-  output: "export",
+module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["tgs963.github.io", "github.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
 };
-
-export default nextConfig;
