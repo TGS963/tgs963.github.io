@@ -24,8 +24,8 @@ export default function Home() {
                 className="rounded-full object-cover"
                 priority
               />
-              <section className="flex-col justify-between">
-                <p className="font-semibold text-2xl frutiger-metallic-text">Suvojit Ghosh</p>
+              <section className="flex flex-col justify-between h-full py-6">
+                <p className="font-semibold text-3xl frutiger-metallic-text">Suvojit Ghosh</p>
                 <p className="text-sm frutiger-metallic-text">I am a software engineer passionate about building scalable systems and exploring new technologies. 
                   Currently focused on full-stack development, DevOps, and low level assembly.
                   Always learning and contributing to open source.</p>
@@ -38,12 +38,12 @@ export default function Home() {
         </section>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         <Card enableGlow customClassName="">
-        <p className="text-2xl font-medium frutiger-metallic-text">Projects</p>
+        <p className="text-2xl md:text-start text-center font-medium frutiger-metallic-text">Projects</p>
         <Projects/>
       </Card>
       <section className="flex flex-col gap-4">
       <Card customClassName="">
-        <p className="text-2xl font-medium frutiger-metallic-text pb-2">GitHub Contribution Chart</p>
+        <p className="text-2xl md:text-start text-center font-medium frutiger-metallic-text pb-2">GitHub Contribution Chart</p>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img 
           src="https://ghchart.rshah.org/26a85c/TGS963" 
@@ -52,7 +52,7 @@ export default function Home() {
         />
       </Card>
       <Card customClassName="">
-        <p className="text-2xl font-medium frutiger-metallic-text pb-2">Work Experiences</p>
+        <p className="text-2xl md:text-start text-center font-medium frutiger-metallic-text pb-2">Work Experiences</p>
         <p className="text-sm frutiger-metallic-text pb-6">
           I've worked with a variety of companies and startups. Here are some of my most notable experiences:
         </p>
