@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaWhatsapp, FaDiscord } from "react-icons/fa";
-import { FiGithub, FiTwitter, FiInstagram, FiMail, FiSend } from "react-icons/fi";
+import { FiGithub, FiTwitter, FiInstagram, FiMail, FiSend, FiLinkedin } from "react-icons/fi";
 
 
 export default function Socials() {
@@ -8,6 +8,7 @@ export default function Socials() {
 
     const socialLinks = [
     { href: "https://github.com/TGS963", icon: <FiGithub className="w-5 h-5" />, text: "GitHub" },
+    { href: "https://www.linkedin.com/in/suvojit-ghosh/", icon: <FiLinkedin className="w-5 h-5" />, text: "LinkedIn" },
     { href: "https://t.me/tgs963", icon: <FiSend className="w-5 h-5" />, text: "Telegram" },
     { href: "https://wa.me/+917003900486", icon: <FaWhatsapp className="w-5 h-5" />, text: "WhatsApp" },
     { href: "https://discord.com/users/tgs963", icon: <FaDiscord className="w-5 h-5" />, text: "Discord" },
