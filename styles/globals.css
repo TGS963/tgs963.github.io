@@ -19,7 +19,7 @@ body {
 }
 
 .frutiger-text-shadow {
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 5px 5px rgba(113, 230, 113, 0.5);
 }
 
 @keyframes subtle-float {
@@ -66,7 +66,7 @@ body {
 }
 
 .frutiger-metallic-text {
-  background: linear-gradient(to right, #2ecc71, #1abc9c);
+  background: linear-gradient(to right, #26a85c, #1abc9c);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
