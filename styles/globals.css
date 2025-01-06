@@ -2,32 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #1a4731;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+/* Custom Frutiger Aero inspired styles */
+.frutiger-background {
+  background-image: radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%),
+                    linear-gradient(135deg, rgba(144,238,144,0.3) 0%, rgba(0,255,127,0.3) 100%);
+  background-attachment: fixed;
+}
+
+.frutiger-glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(144, 238, 144, 0.5);
+}
+
+.frutiger-text-shadow {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.frutiger-float {
+  animation: subtle-float 5s ease-in-out infinite;
+}
+
+/* Updated metallic styles with greenish tint */
+.frutiger-metallic {
+  background-image: linear-gradient(
+      135deg,
+      rgba(220, 255, 220, 0.6) 0%,
+      rgba(220, 255, 220, 0.6) 25%,
+      rgba(0, 100, 0, 0.2) 25%,
+      rgba(0, 100, 0, 0.2) 75%,
+      rgba(220, 255, 220, 0.6) 75%,
+      rgba(220, 255, 220, 0.6) 100%
+    );
+  backdrop-filter: blur(10px);
+}
+
+.frutiger-metallic-overlay {
+  background-image: linear-gradient(
+    to right,
+    rgba(220, 255, 220, 0.2) 0%,
+    rgba(200, 255, 200, 0.4) 50%,
+    rgba(220, 255, 220, 0.2) 100%
+  );
+  mix-blend-mode: overlay;
+}
+
+@keyframes greenish-metallic-shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.frutiger-metallic, .frutiger-metallic-overlay {
+  background-size: 200% 100%;
+  animation: greenish-metallic-shine 10s linear infinite;
+}
+
+.frutiger-metallic-text {
+  background: linear-gradient(to right, #2ecc71, #1abc9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 3px rgba(255, 255, 255, 0.8));
+}
+
+@keyframes twinkle {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+.animate-twinkle {
+  animation: twinkle 5s infinite ease-in-out;
 }
