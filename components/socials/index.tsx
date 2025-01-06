@@ -8,12 +8,12 @@ export default function Socials() {
 
     const socialLinks = [
     { href: "https://github.com/TGS963", icon: <FiGithub className="w-5 h-5" />, text: "GitHub" },
-    { href: "https://x.com/@TheGodSlayer963", icon: <FiTwitter className="w-5 h-5" />, text: "Twitter" },
     { href: "https://t.me/tgs963", icon: <FiSend className="w-5 h-5" />, text: "Telegram" },
     { href: "https://wa.me/+917003900486", icon: <FaWhatsapp className="w-5 h-5" />, text: "WhatsApp" },
+    { href: "https://discord.com/users/tgs963", icon: <FaDiscord className="w-5 h-5" />, text: "Discord" },
+    { href: "https://x.com/@TheGodSlayer963", icon: <FiTwitter className="w-5 h-5" />, text: "Twitter" },
     { href: "https://instagram.com/tgs963", icon: <FiInstagram className="w-5 h-5" />, text: "Instagram" },
     { href: "mailto:ghoshsuvojit2012@gmail.com", icon: <FiMail className="w-5 h-5" />, text: "Email" },
-    { href: "https://discord.com/users/tgs963", icon: <FaDiscord className="w-5 h-5" />, text: "Discord" }
     ];
 
     return (
