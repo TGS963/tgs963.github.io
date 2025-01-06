@@ -46,15 +46,15 @@ export default function Home() {
         <p className="text-2xl md:text-start text-center font-medium frutiger-metallic-text pb-2">GitHub Contribution Chart</p>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img 
-          src="https://ghchart.rshah.org/26a85c/TGS963" 
+          src="https://ghchart.rshah.org/26a85c/TGS963"
           alt="Your GitHub Contributions Chart"
-          className="w-full object-cover rounded-lg" 
+          className="w-full object-cover rounded-lg"
         />
       </Card>
       <Card customClassName="">
         <p className="text-2xl md:text-start text-center font-medium frutiger-metallic-text pb-2">Work Experiences</p>
         <p className="text-sm frutiger-metallic-text pb-6">
-          I've worked with a variety of companies and startups. Here are some of my most notable experiences:
+          I&apos;ve worked with a variety of companies and startups. Here are some of my most notable experiences:
         </p>
         <section className="2xl:flex-row flex-col flex gap-4 2xl:pb-2">
         <a href="https://boostbot.ai" className="p-4 bg-gradient-to-r from-green-300/30 via-green-100 to-green-300/30 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">

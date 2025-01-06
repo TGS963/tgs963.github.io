@@ -117,14 +117,15 @@ export const Projects = () => {
 
             {/* Dots Navigation */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
-                {projects.map((_, index) => (
+                {projects.map((project, index) => (
                     <button
                         type="button"
-                        key={`project-${index}`}
+                        key={project.name}
                         onClick={() => setCurrent(index)}
                         className={`w-2 h-2 rounded-full transition-colors ${
                             index === current ? 'bg-green-500' : 'bg-green-200 dark:bg-green-800'
                         }`}
+                        aria-label={`Go to project ${index + 1}`}
                     />
                 ))}
             </div>
