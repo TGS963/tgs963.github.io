@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Your Name - Portfolio & Projects</title>
+        <title>TGS963 - Portfolio & Projects</title>
         <meta name="description" content="Portfolio showcasing projects like Upscayl Cloud, WriteDown.app and more. Specializing in AI, web development and open source software." />
         {/* Open Graph / Social Media */}
         <meta property="og:title" content="TGS963 - Portfolio & Projects" />
