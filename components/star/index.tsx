@@ -1,43 +1,45 @@
 import { useEffect, useState } from 'react';
 
-interface Star {
+interface FloatingCircle {
   id: number;
-  top: number;
+  bottom: number;
   left: number;
   size: number;
   animationDelay: number;
 }
 
-const Stars = () => {
-  const [stars, setStars] = useState<Star[]>([]);
+const FloatingCircles = () => {
+  const [circles, setCircles] = useState<FloatingCircle[]>([]);
 
   useEffect(() => {
-    const generateStars = () => {
-      const newStars = Array.from({ length: 100 }, (_, i) => ({
+    const generateCircles = () => {
+      const newCircles = Array.from({ length: 5 }, (_, i) => ({
         id: i,
-        top: Math.random() * 100,
+        bottom: -50,
         left: Math.random() * 100,
-        size: Math.random() * 3 + 1,
-        animationDelay: Math.random() * 5
+        size: 2000,
+        animationDelay: Math.random() * 3
       }));
-      setStars(newStars);
+      setCircles(newCircles);
     };
 
-    generateStars();
+    generateCircles();
   }, []);
 
   return (
-    <div className="fixed inset-0 z-0">
-      {stars.map((star) => (
+    <div className="fixed inset-0 z-0 pointer-events-none">
+      {circles.map((circle) => (
         <div
-          key={star.id}
-          className="absolute rounded-full dark:bg-green-300 bg-green-500 animate-twinkle"
+          key={circle.id}
+          className="absolute rounded-full bg-green-300/40 backdrop-blur-sm animate-float"
           style={{
-            top: `${star.top}%`,
-            left: `${star.left}%`,
-            width: `${star.size}px`,
-            height: `${star.size}px`,
-            animationDelay: `${star.animationDelay}s`
+            bottom: `${circle.bottom}%`,
+            left: `${circle.left}%`,
+            width: `${circle.size}px`,
+            background: 'radial-gradient(circle at center, rgba(166, 255, 170, 0.2) 90%, rgba(255,255,255,0) 80%)',
+            height: `${circle.size}px`,
+            animationDelay: `${circle.animationDelay}s`,
+            boxShadow: '0 0 20px rgba(255, 255, 255, 0.2)'
           }}
         />
       ))}
@@ -45,4 +47,4 @@ const Stars = () => {
   );
 };
 
-export default Stars;
+export default FloatingCircles;

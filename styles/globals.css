@@ -31,7 +31,6 @@ body {
   animation: subtle-float 5s ease-in-out infinite;
 }
 
-/* Updated metallic styles with greenish tint */
 .frutiger-metallic {
   background-image: linear-gradient(
       135deg,
@@ -81,4 +80,29 @@ body {
 
 .animate-twinkle {
   animation: twinkle 5s infinite ease-in-out;
+}
+
+@keyframes wander {
+  0% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
+  20% { 
+    transform: translate(15vw, -10vh) rotate(15deg); 
+  }
+  40% { 
+    transform: translate(-20vw, -15vh) rotate(-10deg); 
+  }
+  60% { 
+    transform: translate(25vw, -5vh) rotate(5deg); 
+  }
+  80% { 
+    transform: translate(-15vw, -20vh) rotate(-15deg); 
+  }
+  100% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
+}
+
+.animate-float {
+  animation: wander 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
