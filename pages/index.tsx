@@ -1,9 +1,11 @@
 import { Inter } from "next/font/google";
 import { useTheme } from "next-themes";
-import { FiSun, FiMoon, FiGithub, FiTwitter } from "react-icons/fi";
+import { FiSun, FiMoon, FiGithub, FiTwitter, FiInstagram, FiMail, FiSend } from "react-icons/fi";
+import { FaWhatsapp, FaDiscord } from "react-icons/fa";
 import { Card } from "@/components/card";
 import Stars from "@/components/star";
 import Image from "next/image";
+import Socials from "@/components/socials";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +35,7 @@ export default function Home() {
       <main className="flex flex-col gap-4">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
           <Card enableGlow>
-            <div className="flex items-center justify-center space-x-4">
+            <div className="flex items-center justify-center space-x-4 h-full">
               <Image
                 src="/profile.jpg"
                 alt="Suvojit Ghosh"
@@ -49,19 +51,7 @@ export default function Home() {
             </div>
           </Card>
           <Card>
-            <p className="pb-2 font-medium frutiger-metallic-text">Socials</p>
-            <div className="flex gap-4">
-            <a href="https://github.com/TGS963" 
-              className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200">
-              <FiGithub className="w-5 h-5" />
-              GitHub
-            </a>
-            <a href="https://x.com/@TheGodSlayer963" 
-              className="flex items-center gap-2 hover:text-green-600 transition-colors duration-200">
-              <FiTwitter className="w-5 h-5" />
-              Twitter
-            </a>
-            </div>
+            <Socials />
           </Card>
         </section>
       <Card enableGlow>
