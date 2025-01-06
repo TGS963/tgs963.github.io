@@ -24,7 +24,7 @@ export default function Socials() {
             onClick={() => setIsCollapsed(!isCollapsed)}
             className="md:disabled flex justify-between items-center w-full md:hover:bg-transparent md:cursor-default hover:bg-green-100 transition-all pt-2 ease-in-out duration-300 rounded-lg dark:hover:bg-green-900/30"
         >
-            <p className="text-lg frutiger-metallic-text">Find me at</p>
+            <p className="text-2xl font-medium frutiger-metallic-text">Find me at</p>
         </button>
         </div>
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 transition-all duration-300 ease-in-out
