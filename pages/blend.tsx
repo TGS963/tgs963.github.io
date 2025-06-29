@@ -133,7 +133,7 @@ export default function Blend() {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-1 frutiger-metallic-text">
-                    Material A Weight (W<sub>A</sub>) - Known
+                    Material A Weight (W<sub>A</sub>) - kg
                   </label>
                   <input
                     type="number"
@@ -142,14 +142,14 @@ export default function Blend() {
                     value={materialAWeight || ""}
                     onChange={(e) => setMaterialAWeight(parseFloat(e.target.value) || 0)}
                     className="w-full p-3 rounded-md border border-green-300 bg-green-50/50 focus:ring-green-500 focus:border-green-500"
-                    placeholder="e.g., 100"
+                    placeholder="e.g., 100 kg"
                   />
-                  <p className="text-xs text-green-600 mt-1">Weight in tons, kg, or any unit</p>
+                  <p className="text-xs text-green-600 mt-1">Weight in kilograms (kg)</p>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium mb-1 frutiger-metallic-text">
-                    Material A Grade (G₁<sub>A</sub>) - Known
+                    Material A Grade (G₁<sub>A</sub>) - %
                   </label>
                   <input
                     type="number"
@@ -159,7 +159,7 @@ export default function Blend() {
                     value={materialAGrade || ""}
                     onChange={(e) => setMaterialAGrade(parseFloat(e.target.value) || 0)}
                     className="w-full p-3 rounded-md border border-green-300 bg-green-50/50 focus:ring-green-500 focus:border-green-500"
-                    placeholder="e.g., 15.5"
+                    placeholder="e.g., 15.5%"
                   />
                   <p className="text-xs text-green-600 mt-1">Grade as percentage (%)</p>
                 </div>
@@ -168,7 +168,7 @@ export default function Blend() {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-1 frutiger-metallic-text">
-                    Material B Grade (G₁<sub>B</sub>) - Known
+                    Material B Grade (G₁<sub>B</sub>) - %
                   </label>
                   <input
                     type="number"
@@ -178,14 +178,14 @@ export default function Blend() {
                     value={materialBGrade || ""}
                     onChange={(e) => setMaterialBGrade(parseFloat(e.target.value) || 0)}
                     className="w-full p-3 rounded-md border border-green-300 bg-green-50/50 focus:ring-green-500 focus:border-green-500"
-                    placeholder="e.g., 25.0"
+                    placeholder="e.g., 25.0%"
                   />
                   <p className="text-xs text-green-600 mt-1">Grade as percentage (%)</p>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium mb-1 frutiger-metallic-text">
-                    Desired Blended Grade (G₁) - Target
+                    Desired Blended Grade (G₁) - %
                   </label>
                   <input
                     type="number"
@@ -195,7 +195,7 @@ export default function Blend() {
                     value={desiredBlendedGrade || ""}
                     onChange={(e) => setDesiredBlendedGrade(parseFloat(e.target.value) || 0)}
                     className="w-full p-3 rounded-md border border-green-300 bg-green-50/50 focus:ring-green-500 focus:border-green-500"
-                    placeholder="e.g., 20.0"
+                    placeholder="e.g., 20.0%"
                   />
                   <p className="text-xs text-green-600 mt-1">Target grade as percentage (%)</p>
                 </div>
@@ -240,14 +240,14 @@ export default function Blend() {
                   <div className="p-4 bg-green-100/60 rounded-lg">
                     <h3 className="font-medium text-lg frutiger-metallic-text">Material B Weight Required</h3>
                     <p className="text-2xl font-bold text-green-700">
-                      {result.materialBWeight.toFixed(2)} units
+                      {result.materialBWeight.toFixed(2)} kg
                     </p>
                   </div>
                   
                   <div className="p-4 bg-green-100/60 rounded-lg">
                     <h3 className="font-medium frutiger-metallic-text">Total Blended Weight</h3>
                     <p className="text-lg font-semibold text-green-700">
-                      {result.totalWeight.toFixed(2)} units
+                      {result.totalWeight.toFixed(2)} kg
                     </p>
                   </div>
                 </div>
@@ -279,17 +279,6 @@ export default function Blend() {
                       </p>
                     </div>
                   )}
-                </div>
-              </div>
-              
-              {/* Detailed Breakdown */}
-              <div className="mt-6 p-4 bg-gray-100/60 rounded-lg">
-                <h3 className="font-medium mb-3 frutiger-metallic-text">Calculation Breakdown</h3>
-                <div className="space-y-2 text-sm font-mono">
-                  <p>W<sub>B</sub> = W<sub>A</sub> × (G₁ - G₁<sub>A</sub>) / (G₁<sub>B</sub> - G₁)</p>
-                  <p>W<sub>B</sub> = {materialAWeight} × ({desiredBlendedGrade} - {materialAGrade}) / ({materialBGrade} - {desiredBlendedGrade})</p>
-                  <p>W<sub>B</sub> = {materialAWeight} × {(desiredBlendedGrade - materialAGrade).toFixed(2)} / {(materialBGrade - desiredBlendedGrade).toFixed(2)}</p>
-                  <p className="font-bold">W<sub>B</sub> = {result.materialBWeight.toFixed(2)} units</p>
                 </div>
               </div>
             </Card>
